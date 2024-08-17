@@ -21,7 +21,7 @@
 
 ## Database Design
 
--   SQL Database (e.g., MySQL, PostgreSQL)
+-   sqllite
 -   Schema Overview
 
 ## User Interface Design
