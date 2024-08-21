@@ -11,11 +11,11 @@ class Group extends Model
 
     protected $fillable = ['name'];
 
-    public function sections()
+    public function section()
     {
         return $this->hasMany(Section::class);
     }
-    public function students()
+    public function student()
     {
         return $this->hasMany(Student::class);
     }

@@ -11,12 +11,14 @@ class Student extends Model
 
     protected $fillable = ['first_name', 'last-name', 'group_id', 'section_id', 'email'];
 
-    public function groups()
+    protected $with = ['group', 'section'];
+
+    public function group()
     {
         return $this->belongsTo(Group::class);
     }
 
-    public function sections()
+    public function section()
     {
         return $this->belongsTo(Section::class);
     }

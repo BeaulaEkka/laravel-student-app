@@ -11,12 +11,12 @@ class Section extends Model
 
     protected $fillable = ['name', 'group_id'];
 
-    public function students()
+    public function student()
     {
         return $this->hasMany(Student::class);
     }
 
-    public function groups ()
+    public function group ()
     {
         return $this->belongsTo(Group::class);
     }
