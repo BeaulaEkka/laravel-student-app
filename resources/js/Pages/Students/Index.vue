@@ -1,5 +1,7 @@
 <script setup>
+import Pagination from "@/Components/Pagination.vue";
 import StudentSearchBar from "@/Components/StudentSearchBar.vue";
+import { usePage } from "@inertiajs/vue3";
 
 defineProps({
     students: {
@@ -82,6 +84,7 @@ defineProps({
                         </tbody>
                     </table>
                 </div>
+                <div class="mt-5"><Pagination :data="students" /></div>
             </div>
         </div>
     </div>
