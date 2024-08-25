@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\GroupsResource;
 use App\Http\Resources\StudentResource;
+use App\Models\Group;
 use App\Models\Student;
 
 class StudentController extends Controller
@@ -15,5 +17,13 @@ class StudentController extends Controller
             'students' => $students,
         ]);
 
+    }
+
+    public function create()
+    {
+        $group = GroupsResource::collection(Group::all());
+        return inertia('Students/Create', [
+            'group' => $group,
+        ]);
     }
 }
